@@ -24,7 +24,7 @@ export default function HomeScreen() {
 
   const addEntry = () => {
 
-if(!newName.trim()){
+  if(!newName.trim()){
    return;
   }
 
