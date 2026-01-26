@@ -8,59 +8,35 @@
 
 ---
 
-## Current Status: Step 1 of Core Functionality
+## Current Status: Phase 1 Complete!
 
 ### What's Done
 - [x] Basic project setup (Expo + React Native)
 - [x] Home screen with backlog list
 - [x] BacklogEntry type defined (id, name, quantity, status)
-- [x] Sample data displaying in FlatList
 - [x] Dark theme base styling
-- [x] State variables for modal (modalVisible, newName, newQuantity)
+- [x] Working Add Entry Modal with name & quantity inputs
+- [x] Status toggling (tap card to cycle: unpainted → in_progress → painted)
+- [x] Delete entries (long-press to remove)
+- [x] Data persistence with AsyncStorage
 
-### Currently Working On
-**Task: Fix the Add Entry Modal**
+### Next Up
+**Phase 2: Goblin Theme & Visuals**
 
-The modal state exists but isn't connected. You need to:
-
-1. Add imports: `Modal` and `TextInput` from 'react-native'
-2. Create a `<Modal>` component with:
-   - Overlay background
-   - Content box with inputs
-   - Name input (connected to `newName`)
-   - Quantity input (connected to `newQuantity`)
-   - Submit button
-   - Cancel button
-3. Update `addEntry()` to use the input values instead of hardcoded "new squad"
-4. Change the "+ Add Squad" button to open the modal
-
-**Hint code:**
-```tsx
-<Modal visible={modalVisible} animationType="slide" transparent>
-  <View style={styles.modalOverlay}>
-    <View style={styles.modalContent}>
-      <TextInput
-        value={newName}
-        onChangeText={setNewName}
-        placeholder="Squad name"
-        placeholderTextColor="#666"
-        style={styles.input}
-      />
-      {/* Add quantity input and buttons */}
-    </View>
-  </View>
-</Modal>
-```
+- Goblin mascot character
+- Cards styled as Warhammer boxes
+- Thematic color palette
+- Animations
 
 ---
 
 ## Roadmap
 
-### Phase 1: Core Functionality
-- [ ] Working add entry modal with inputs
-- [ ] Status toggling (tap to cycle: unpainted -> in_progress -> painted)
-- [ ] Delete entries (swipe or long press)
-- [ ] Data persistence with AsyncStorage
+### Phase 1: Core Functionality ✅
+- [x] Working add entry modal with inputs
+- [x] Status toggling (tap to cycle: unpainted -> in_progress -> painted)
+- [x] Delete entries (long press)
+- [x] Data persistence with AsyncStorage
 
 ### Phase 2: Goblin Theme & Visuals
 - [ ] Goblin mascot character
